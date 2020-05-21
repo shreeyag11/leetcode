@@ -15,7 +15,10 @@
 // The boundaries of each input argument are 1 <= left <= right <= 10000 
 
 
-class Solution {
+import java.util.ArrayList;
+import java.util.List;
+
+class Solutions {
     public List<Integer> selfDividingNumbers(int left, int right) {
         List<Integer> l = new ArrayList<>();
         for(int i=left; i<=right; i++)
