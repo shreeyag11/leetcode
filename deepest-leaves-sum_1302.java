@@ -1,9 +1,6 @@
 // Given a binary tree, return the sum of values of its deepest leaves.
- 
 
 // Example 1:
-
-
 
 // Input: root = [1,2,3,4,5,null,6,7,null,null,null,null,8]
 // Output: 15
@@ -23,14 +20,15 @@
  *     TreeNode(int x) { val = x; }
  * }
  */
-class DeepestSum {
+
+class Solution {
     int sum=0,height=0;
-    public int deepestLeavesSum(TreeNode root) {
+    public int deepestLeavesSum(final TreeNode root) {
         height = height(root);
         dfs(root, 1);
         return sum;
     }   
-    public void dfs(TreeNode node, int curr) {
+    public void dfs(final TreeNode node, final int curr) {
         if(node==null)
             return;
         if(curr == height){
@@ -39,7 +37,7 @@ class DeepestSum {
         dfs(node.left,curr+1);
         dfs(node.right,curr+1);
     }
-    public int height(TreeNode node){
+    public int height(final TreeNode node){
         if(node == null)
             return 0;
        return Math.max(height(node.left), height(node.right))+1;
