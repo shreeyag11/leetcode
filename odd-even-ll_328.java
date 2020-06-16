@@ -33,7 +33,6 @@ class Solution {
         if(head == null) return null;
         ListNode headOdd = head, headEven = head.next, even = headEven;        
          while(headEven!=null && headEven.next!=null){
-            // System.out.println(headOdd.val);
             headOdd.next = headOdd.next.next;
             headOdd = headOdd.next;
             headEven.next = headEven.next.next;
