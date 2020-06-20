@@ -15,15 +15,40 @@
 // S and J will consist of letters and have length at most 50.
 // The characters in J are distinct
 
+/**
+ * APPROACH USING 2 FOR LOOPS ---------TIME COMPLEXITY: O(m*n) -----------SPACE
+ * COMPLEXITY: O(1)
+ */
+
 class JewelsAndStones {
     public int numJewelsInStones(String J, String S) {
-       int count=0;
-        for(int i=0;i<J.length();i++){
-            for(int j=0; j<S.length();j++){
-                if(J.charAt(i)==S.charAt(j))
+        int count = 0;
+        for (int i = 0; i < J.length(); i++) {
+            for (int j = 0; j < S.length(); j++) {
+                if (J.charAt(i) == S.charAt(j))
                     count++;
             }
         }
         return count;
     }
 }
+
+/**
+ * APPROACH USING HASHMAP ----TIME COMPLEXITY: O(m+n)---- SPACE COMPLEXITY: O(n)
+ * ..HASHMAP OF STRING S
+ */
+
+// class Solution {
+// public int numJewelsInStones(String J, String S) {
+// int count=0;
+// HashMap<Character, Integer> map = new HashMap<>();
+// for(int i=0;i<S.length();i++){
+// map.put(S.charAt(i),map.getOrDefault(S.charAt(i),0)+1);
+// }
+// for(int i=0;i<J.length();i++){
+// if(map.containsKey(J.charAt(i)))
+// count+=map.get(J.charAt(i));
+// }
+// return count;
+// }
+// }
