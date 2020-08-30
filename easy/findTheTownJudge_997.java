@@ -82,3 +82,17 @@ public class findTheTownJudge_997 {
         }
     }
 }
+
+// class Solution {
+// public int findJudge(int N, int[][] trust) {
+// int[] isTrusted = new int[N+1];
+// for(int[] index:trust) {
+// isTrusted[index[0]]--;
+// isTrusted[index[1]]++;
+// }
+// for(int i=1;i<isTrusted.length;i++)
+// if(isTrusted[i]==N-1)
+// return i;
+// return -1;
+// }
+// }
