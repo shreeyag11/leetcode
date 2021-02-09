@@ -2,8 +2,6 @@ class Solution {
     int[][] g;
 
     public int maxAreaOfIsland(int[][] grid) {
-        int m = grid.length;
-        int n = grid[0].length;
         int res = 0;
         g = grid;
         for (int i = 0; i < grid.length; i++) {
