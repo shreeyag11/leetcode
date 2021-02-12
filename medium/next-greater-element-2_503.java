@@ -24,3 +24,22 @@ class NextGreaterEle2 {
         return res;
     }
 }
+
+// class Solution {
+// public int[] nextGreaterElements(int[] nums) {
+// int[] newNums = new int[nums.length * 2];
+// int[] res = new int[nums.length];
+// System.arraycopy(nums, 0, newNums, 0, nums.length);
+// System.arraycopy(nums, 0, newNums, nums.length, nums.length);
+// for(int i = 0; i < nums.length; i++) {
+// res[i] = -1;
+// for(int j = i + 1; j < newNums.length; j++) {
+// if(newNums[j] > nums[i]) {
+// res[i] = newNums[j];
+// break;
+// }
+// }
+// }
+// return res;
+// }
+// }
