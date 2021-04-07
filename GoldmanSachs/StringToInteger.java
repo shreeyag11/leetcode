@@ -1,6 +1,7 @@
 package GoldmanSachs;
 
 public class StringToInteger {
+
     public int myAtoi(String s) {
         int i = 0;
         int sign = 1;
